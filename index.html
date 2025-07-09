@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rian de Assis Duarte | Portfólio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #67CB57, #569532);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            border-bottom: 3px solid #057569;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        .project {
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .project h3 {
+            margin-top: 0;
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+        }
+        .project a {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #1976d2;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .tags {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #0d47a1;
+            color: #fff;
+        }
+        a.link {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        #carousel button {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+
+        #carousel:hover button {
+        opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rian de Assis Duarte</h1>
+        <p>Consultor de SIG & Soluções Geoespaciais</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>Sobre Mim</h2>
+            <p>Sou estudante de Geografia na Universidade de Brasília (UnB), com foco em Geoprocessamento e Sistemas de Informação Geográfica (SIG). Tenho me dedicado ao aprimoramento técnico em geotecnologias, especialmente na produção e análise de mapas digitais, por meio de disciplinas específicas, cursos complementares e projetos pessoais voltados à aplicação prática e profissional do geoprocessamento.</p>
+            <p>Estou em busca de oportunidades de estágio onde possa aplicar minha criatividade e domínio técnico para transformar metadadados geoespaciais em soluções práticas.</p>
+        </section>
+
+    <div class="project">
+        <h3>Catalógo de Mapas</h3>
+        <div id="carousel" style="position: relative; max-width: 100%; overflow: hidden; border-radius: 12px;">
+            <img id="carousel-image" src="imagens/mapa1.png" alt="Mapa 1" style="width: 100%; border-radius: 12px; transition: opacity 0.4s ease;">
+            <button id="prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: #1976d2; color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">&#10094;</button>
+            <button id="next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: #1976d2; color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">&#10095;</button>
+        </div>
+        <p class="tags">Mapas digitais | QGIS | Layouts personalizados</p>
+    </div>
+        <script>
+        const imagens = [
+        "imagens/mapa1.png",
+        "imagens/mapa2.png",
+        "imagens/mapa3.png",
+        "imagens/mapa4.png",
+        "imagens/mapa5.jpeg",
+        "imagens/mapa6.jpeg",
+        "imagens/mapa7.png",
+        "imagens/mapa8.jpg",
+        "imagens/mapa9.jpg"
+        ]; // Substitua pelos nomes dos seus arquivos
+
+        let indexAtual = 0;
+
+            const imagem = document.getElementById("carousel-image");
+            const btnProx = document.getElementById("next");
+            const btnAnt = document.getElementById("prev");
+
+
+            function mostrarImagem(index) {
+            imagem.style.opacity = 0;
+            setTimeout(() => {
+            imagem.src = imagens[index];
+            imagem.style.opacity = 1;
+            }, 200);
+            }
+
+            btnProx.addEventListener("click", () => {
+            indexAtual = (indexAtual + 1) % imagens.length;
+            mostrarImagem(indexAtual);
+            });
+
+            btnAnt.addEventListener("click", () => {
+            indexAtual = (indexAtual - 1 + imagens.length) % imagens.length;
+            mostrarImagem(indexAtual);
+            });
+            </script>
+
+            <section class="section">
+            <h2>Experiência Profissional</h2>
+            <p><strong>Freelancer em Consultoria de Sistemas de Informação Geográfica</strong> – Organização das Nações Unidas para Alimentação e Agricultura (2025–2025) </p>
+            <p><strong>Monitoria Voluntária em Disciplina de Geografia Humana 1</strong> – Universidade de Brasília (2024-2025)</p>
+            <p><strong>Monitoria Voluntária em Disciplina de Introdução à Ciência Geográfica</strong> – Universidade de Brasília (2024)</p>
+        </section>
+            
+            <section class="section">
+            <h2>Formação Acadêmica</h2>
+            <p><strong>Bacharelado e Licenciatura em Geografia</strong> – Universidade de Brasília (2023–2027)</p>
+            <p><strong>Técnico em Desenvolvimento de Sistemas</strong> – Instituto Federal de Brasília (2023–2023)</p>
+        </section>
+
+            <section class="section">
+            <h2>Certificados e Cursos Complementares</h2>
+            <p><strong>Curso de Língua Inglesa</strong> – Centro Interescolar de Línguas (2014–2019)</p>
+            <p><strong>Introdução ao QGIS como Ferramenta de Análise Ambiental</strong> – Universidade de Brasília (2024–2024)</p>
+            <p><strong>Minicurso sobre Relações Internacionais e Meio Ambiente: Aspectos Introdutórios e de Iniciação à Pesquisa</strong> – Universidade Federal do Rio Grande do Sul (2025–2025)</p>
+            <p><strong>Conhecendo a Plataforma Lattes: Minicurso Sobre o Currículo Lattes</strong> – Universidade de Brasília (2024–2024)</p>
+        </section>
+
+
+        <section class="section">
+            <h2>Tecnologias</h2>
+            <p><strong>Linguagens:</strong> JavaScript e HTML5</p>
+            <p><strong>Ferramentas:</strong> QGIS, Pacote Office Intermediário, Canva e Google Documentos</p>
+        </section>
+
+        <section class="section">
+            <h2>Contato</h2>
+           <p style="color: #0A66C2">
+  <img src="logos/linkedin.png" alt="LinkedIn" style="width:20px; vertical-align: middle; margin-right: 6px;">
+  LinkedIn: 
+  <a href="https://www.linkedin.com/in/rian-de-assis-duarte-977ba616b/" class="link" target="_blank" style="color: #000000">
+    https://www.linkedin.com/in/rian-de-assis-duarte-977ba616b/
+  </a>
+</p>
+
+<p style="color: #F14336">
+  <img src="logos/gmail.png" alt="Gmail" style="width:20px; vertical-align: middle; margin-right: 6px;">
+  Email: 
+  <a href="mailto:riandeassisduarte1801@gmail.com" class="link" style="color: #000000">
+    riandeassisduarte1801@gmail.com
+  </a>
+</p>
+
+<p style="color: #24CC63">
+  <img src="logos/whatsapp.png" alt="WhatsApp" style="width:20px; vertical-align: middle; margin-right: 6px;">
+  Telefone / WhatsApp: 
+  <a href="https://wa.me/5561998261977" class="link" target="_blank" style="color: #000000">
+    +55 (61) 99826-1977
+  </a>
+</p>
+
+        </section>
+    </div>
+
+
+    <footer>
+        <p>Rian de Assis Duarte &copy; 2025</p>
+    </footer>
+
+
+</body>
+</html>
+
