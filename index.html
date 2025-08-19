@@ -10,11 +10,16 @@
 
 <body>
     <header>
-        <h1>Rian de Assis Duarte</h1>
-        <p>Consultor de SIG & Soluções Geoespaciais</p>
+        <div class="content">
+            <img class="profile-image" src="assets/img/profile.jpg" alt="Profile photo">
+            <div class="header-main">
+                <h1>Rian de Assis Duarte</h1>
+                <p>Consultor de SIG & Soluções Geoespaciais</p>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
+    <main class="container">
         <section class="section">
             <h2>Sobre Mim</h2>
             <p>Sou estudante de Geografia na Universidade de Brasília (UnB), com foco em Geoprocessamento e Sistemas de
@@ -27,13 +32,13 @@
 
         <div class="project">
             <h3>Catalógo de Mapas</h3>
-            <div id="carousel" style="position: relative; max-width: 100%; overflow: hidden; border-radius: 12px;">
-                <img id="carousel-image" src="assets/img/maps/mapa1.png" alt="Mapa 1"
-                    style="width: 100%; border-radius: 12px; transition: opacity 0.4s ease;">
-                <button id="prev"
-                    style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: #1976d2; color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">&#10094;</button>
-                <button id="next"
-                    style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: #1976d2; color: white; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">&#10095;</button>
+            <div id="carousel">
+                <img id="carousel-image" src="">
+                <button id="prev" class="controls">&#10094;</button>
+                <button id="next" class="controls">&#10095;</button>
+            </div>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
             </div>
             <p class="tags">Mapas digitais | QGIS | Layouts personalizados</p>
         </div>
@@ -83,37 +88,31 @@
         <section class="section">
             <h2>Contato</h2>
             <p style="color: #0A66C2">
-                <img src="logos/linkedin.png" alt="LinkedIn"
-                    style="width:20px; vertical-align: middle; margin-right: 6px;">
-                LinkedIn:
-                <a href="https://www.linkedin.com/in/rian-de-assis-duarte-977ba616b/" class="link" target="_blank"
-                    style="color: #000000">
-                    https://www.linkedin.com/in/rian-de-assis-duarte-977ba616b/
+                <img class="contato-icon" src="assets/img/logos/linkedin.png" alt="LinkedIn">
+                <a href="https://www.linkedin.com/in/rian-de-assis-duarte-977ba616b/" target="_blank">
+                    https://www.linkedin.com/in/rian-de-assis-duarte-977ba616b
                 </a>
             </p>
 
             <p style="color: #F14336">
-                <img src="logos/gmail.png" alt="Gmail" style="width:20px; vertical-align: middle; margin-right: 6px;">
-                Email:
-                <a href="mailto:riandeassisduarte1801@gmail.com" class="link" style="color: #000000">
+                <img class="contato-icon" src="assets/img/logos/gmail.png" alt="Gmail">
+                <a href="mailto:riandeassisduarte1801@gmail.com">
                     riandeassisduarte1801@gmail.com
                 </a>
             </p>
 
             <p style="color: #24CC63">
-                <img src="logos/whatsapp.png" alt="WhatsApp"
-                    style="width:20px; vertical-align: middle; margin-right: 6px;">
-                Telefone / WhatsApp:
-                <a href="https://wa.me/5561998261977" class="link" target="_blank" style="color: #000000">
+                <img class="contato-icon" src="assets/img/logos/whatsapp.png" alt="WhatsApp">
+                <a href="https://wa.me/5561998261977" target="_blank">
                     +55 (61) 99826-1977
                 </a>
             </p>
 
         </section>
-    </div>
+    </main>
 
     <footer>
-        <p>Rian de Assis Duarte &copy; 2025</p>
+        <p>&copy; 2025 Rian de Assis Duarte</p>
     </footer>
 
     <script src="assets/js/script.js"></script>

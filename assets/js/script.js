@@ -10,29 +10,41 @@ const imagens = [
     "mapa7.png",
     "mapa8.jpg",
     "mapa9.jpg"
-]; // Substitua pelos nomes dos seus arquivos
+];
 
 let indexAtual = 0;
 
 const imagem = document.getElementById("carousel-image");
 const btnProx = document.getElementById("next");
 const btnAnt = document.getElementById("prev");
+const carousel = document.getElementById("carousel");
+const progressBar = document.getElementById("progress-bar");
 
+imagens.forEach(src => {
+    const img = new Image();
+    img.src = `assets/img/maps/${src}`;
+});
 
 function mostrarImagem(index) {
     imagem.style.opacity = 0;
     setTimeout(() => {
         imagem.src = `assets/img/maps/${imagens[index]}`;
-        imagem.style.opacity = 1;
+        imagem.onload = () => (imagem.style.opacity = 1);
     }, 200);
+    progressBar.style.width = `${((index+1) * 100) / imagens.length}%`;
 }
 
-btnProx.addEventListener("click", () => {
+function proximaImagem() {
     indexAtual = (indexAtual + 1) % imagens.length;
     mostrarImagem(indexAtual);
-});
+}
 
-btnAnt.addEventListener("click", () => {
+function anteriorImagem() {
     indexAtual = (indexAtual - 1 + imagens.length) % imagens.length;
     mostrarImagem(indexAtual);
-});
+}
+
+btnProx.addEventListener("click", proximaImagem);
+btnAnt.addEventListener("click", anteriorImagem);
+
+mostrarImagem(0);
