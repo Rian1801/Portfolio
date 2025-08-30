@@ -9,7 +9,8 @@ const imagens = [
     "mapa6.jpeg",
     "mapa7.png",
     "mapa8.jpg",
-    "mapa9.jpg"
+    "mapa9.jpg",
+    "mapa10.png"
 ];
 
 let indexAtual = 0;
